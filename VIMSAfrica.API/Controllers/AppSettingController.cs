@@ -42,7 +42,7 @@ namespace VIMSAfrica.API.Controllers
             }
         }
 
-§       //NOT Tested
+        //NOT Tested
         [HttpPost]
         public async Task<IActionResult> Add(AddAppSettingDto addAppSettingDto)
         {
