@@ -1,0 +1,12 @@
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/Debug/net5.0/VIMSAfrica.CORE.csprojAssemblyReference.cache
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/Debug/net5.0/VIMSAfrica.CORE.GeneratedMSBuildEditorConfig.editorconfig
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/Debug/net5.0/VIMSAfrica.CORE.AssemblyInfoInputs.cache
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/Debug/net5.0/VIMSAfrica.CORE.AssemblyInfo.cs
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/Debug/net5.0/VIMSAfrica.CORE.csproj.CoreCompileInputs.cache
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/bin/Debug/net5.0/VIMSAfrica.CORE.deps.json
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/bin/Debug/net5.0/VIMSAfrica.CORE.dll
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/bin/Debug/net5.0/ref/VIMSAfrica.CORE.dll
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/bin/Debug/net5.0/VIMSAfrica.CORE.pdb
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/Debug/net5.0/VIMSAfrica.CORE.dll
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/Debug/net5.0/ref/VIMSAfrica.CORE.dll
+/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/Debug/net5.0/VIMSAfrica.CORE.pdb

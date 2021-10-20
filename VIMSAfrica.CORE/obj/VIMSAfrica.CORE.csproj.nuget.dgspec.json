@@ -1,0 +1,94 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/VIMSAfrica.CORE.csproj": {}
+  },
+  "projects": {
+    "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/VIMSAfrica.CORE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/VIMSAfrica.CORE.csproj",
+        "projectName": "VIMSAfrica.CORE",
+        "projectPath": "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/VIMSAfrica.CORE.csproj",
+        "packagesPath": "/Users/bomanazibaogoni/.nuget/packages/",
+        "outputPath": "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bomanazibaogoni/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
