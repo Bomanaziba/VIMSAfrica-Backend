@@ -23,14 +23,13 @@ namespace VIMSAfrica.CORE.Service.Impl
             _logger = logger;
         }
 
-
         public async Task AddAppSetting(AddAppSettingDto appSetting)
         {
             if(appSetting == null) throw new ArgumentNullException();
 
             try
             {
-                var app = new AppSetting
+                IAppSetting app = new AppSetting
                 {
                     Key = appSetting.Key,
                     Value = appSetting.Value,
@@ -46,6 +45,7 @@ namespace VIMSAfrica.CORE.Service.Impl
             }
         }
 
+        //TODO: 
         public async Task<IAppSetting> GetAppSetting(string key)
         {
             throw new System.NotImplementedException();

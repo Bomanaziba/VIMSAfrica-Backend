@@ -25,7 +25,6 @@ namespace VIMSAfrica.CORE.Repository.Impl
             _logger = logger;
         }
 
-
         public async Task Save(IAppSetting appSetting)
         {
             if (appSetting == null) throw new ArgumentNullException(nameof(appSetting));
@@ -44,6 +43,7 @@ namespace VIMSAfrica.CORE.Repository.Impl
                     parameters.Add("@value", appSetting.Value);
                     parameters.Add("@datecreated", appSetting.DateCreated);
                     
+                    //TODO: add SP
                     var respone = await conn.ExecuteAsync("[dbo].[usp_Insert_AppSetting]", parameters, commandType: CommandType.StoredProcedure);
                     
                     conn.Close();
