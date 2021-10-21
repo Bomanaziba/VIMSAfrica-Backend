@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/VIMSAfrica.CORE.csproj": {}
+    "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj": {}
   },
   "projects": {
-    "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/VIMSAfrica.CORE.csproj": {
+    "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/VIMSAfrica.CORE.csproj",
+        "projectUniqueName": "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj",
         "projectName": "VIMSAfrica.CORE",
-        "projectPath": "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/VIMSAfrica.CORE.csproj",
-        "packagesPath": "/Users/bomanazibaogoni/.nuget/packages/",
-        "outputPath": "/Users/bomanazibaogoni/Public/Project/VIMS/backend/VIMSAfrica.CORE/obj/",
+        "projectPath": "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj",
+        "packagesPath": "C:\\Users\\Automata\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/bomanazibaogoni/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Automata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = VIMSAfrica.API
-build_property.ProjectDir = C:\Users\Automata\Source\Repos\VIMSAfrica-Backend\VIMSAfrica.API\
+build_property.ProjectDir = C:\Users\Automata\source\repos\VIMSAfrica-Backend\VIMSAfrica.API\
