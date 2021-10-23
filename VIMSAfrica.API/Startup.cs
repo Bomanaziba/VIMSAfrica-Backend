@@ -39,6 +39,8 @@ namespace VIMSAfrica.API
 
             services.AddScoped<IAppSettingRepository, AppSettingRepository>();
             services.AddScoped<IAppSettingService, AppSettingService>();
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IVehicleService, VehicleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
