@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VIMSAfrica.CORE.Dtos;
 using VIMSAfrica.CORE.Service;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -59,11 +60,14 @@ namespace VIMSAfrica.API.Controllers
 
         // POST api/<VehicleController>
         [HttpPost("add-vehicle")]
-        public async Task<IActionResult> AddVehicle([FromBody] string value)
+        public async Task<IActionResult> AddVehicle(VehicleDto vehicleDto)
         {
+            if (vehicleDto == null) return BadRequest("Request can not be null");
+
             try
             {
-                return Ok();
+
+                return StatusCode(200, new { message = "Vehicle Added Successfully" });
             }
             catch (Exception e)
             {
@@ -74,11 +78,13 @@ namespace VIMSAfrica.API.Controllers
 
         // PUT api/<VehicleController>/5
         [HttpPut("update-vehicle/{id}")]
-        public async Task<IActionResult> EditVehicle(int id, [FromBody] string value)
+        public async Task<IActionResult> EditVehicle(VehicleDto vehicleDto)
         {
+            if (vehicleDto == null) return BadRequest("Request can not be null");
+
             try
             {
-                return Ok();
+                return StatusCode(200, new { message = "Vehicle Updated Successfully" });
             }
             catch (Exception e)
             {
@@ -92,9 +98,11 @@ namespace VIMSAfrica.API.Controllers
         [HttpDelete("delete-vehicle/{id}")]
         public async Task<IActionResult> DeleteVehicle(int id)
         {
+            if (id<1) return BadRequest("Request can not be null");
+
             try
             {
-                return Ok();
+                return StatusCode(200, new { message = "Vehicle Removed Successfully" });
             }
             catch (Exception e)
             {
