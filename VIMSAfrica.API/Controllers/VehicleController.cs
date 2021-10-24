@@ -66,6 +66,13 @@ namespace VIMSAfrica.API.Controllers
 
             try
             {
+                var vehicleRecord = await _vehicleService.GetVehicleByRegNumber(vehicleDto.RegistrationNumber);
+                if (vehicleRecord!=null)
+                {
+                    return StatusCode(400, new { error = "Vehicle Already Exist" });
+
+                }
+                 await _vehicleService.AddVehicle(vehicleDto);
 
                 return StatusCode(200, new { message = "Vehicle Added Successfully" });
             }
@@ -84,6 +91,14 @@ namespace VIMSAfrica.API.Controllers
 
             try
             {
+                var vehicleRecord = await _vehicleService.GetVehicleById(vehicleDto.Id);
+                if (vehicleRecord != null)
+                {
+                    return StatusCode(400, new { error = "Enter a valid Id" });
+
+                }
+                await _vehicleService.AddVehicle(vehicleDto);
+
                 return StatusCode(200, new { message = "Vehicle Updated Successfully" });
             }
             catch (Exception e)

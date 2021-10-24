@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj": {}
+    "C:\\Users\\dell\\Source\\Repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj": {
+    "C:\\Users\\dell\\Source\\Repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj",
+        "projectUniqueName": "C:\\Users\\dell\\Source\\Repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj",
         "projectName": "VIMSAfrica.CORE",
-        "projectPath": "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj",
-        "packagesPath": "C:\\Users\\Automata\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Automata\\source\\repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\obj\\",
+        "projectPath": "C:\\Users\\dell\\Source\\Repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\VIMSAfrica.CORE.csproj",
+        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dell\\Source\\Repos\\VIMSAfrica-Backend\\VIMSAfrica.CORE\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Automata\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -93,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
