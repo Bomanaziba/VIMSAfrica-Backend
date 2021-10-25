@@ -33,7 +33,9 @@ namespace VIMSAfrica.API.Controllers
         {
             try
             {
-                return Ok();
+                var vehicleRecord = await _vehicleService.GetVehicles();
+
+                return Ok(vehicleRecord);
             }
             catch (Exception e)
             {
@@ -47,9 +49,13 @@ namespace VIMSAfrica.API.Controllers
         [HttpGet("get-vehicle/{id}")]
         public async Task<IActionResult> GetVehicle(int id)
         {
+            if (id<1) return BadRequest("Enter a valid Id");
+
             try
             {
-                return Ok();
+                var vehicleRecord = await _vehicleService.GetVehicleById(id);
+
+                return Ok(vehicleRecord);
             }
             catch (Exception e)
             {
@@ -117,6 +123,8 @@ namespace VIMSAfrica.API.Controllers
 
             try
             {
+                await _vehicleService.RemoveVehicle(id);
+
                 return StatusCode(200, new { message = "Vehicle Removed Successfully" });
             }
             catch (Exception e)

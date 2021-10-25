@@ -24,6 +24,27 @@ namespace VIMSAfrica.CORE.Repository.Impl
             _config = config;
             _logger = logger;
         }
+        public async Task<IEnumerable<IVehicle>> GetAllVehicle()
+        {
+
+            try
+            {
+
+                using (IDbConnection conn = new SqlConnection(_config.GetConnectionString("Default")))
+                {
+                    if (conn.State == ConnectionState.Closed) conn.Open();
+                    var record = await conn.QueryMultipleAsync("[dbo].[usp_get_vehicles]", commandType: CommandType.StoredProcedure);
+                    var result = await record.ReadAsync<Vehicle>();
+                    return result.AsList();
+                }
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                throw e;
+            }
+
+        }
         public async Task<IVehicle> GetVehicleById(int id)
         {
             if (id < 1) throw new ArgumentOutOfRangeException(nameof(id));
@@ -103,6 +124,23 @@ namespace VIMSAfrica.CORE.Repository.Impl
                 parameters.Add("@InsuranceExpiry", addVehicle.InsuranceExpiry);
                 parameters.Add("@DateCreated", DateTime.Now);
                 con.Execute("[dbo].[usp_Insert_Vehicle]", parameters, commandType: CommandType.StoredProcedure);
+                con.Close();
+
+            }
+        }
+            
+        public async Task RemoveVehicle(int id)
+        {
+
+            using (IDbConnection con = new SqlConnection(_config.GetConnectionString("Default")))
+            {
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+
+                DynamicParameters parameters = new DynamicParameters();
+                parameters.Add("@Id", id);
+                
+                con.Execute("[dbo].[usp_Delete_Vehicle]", parameters, commandType: CommandType.StoredProcedure);
                 con.Close();
 
             }

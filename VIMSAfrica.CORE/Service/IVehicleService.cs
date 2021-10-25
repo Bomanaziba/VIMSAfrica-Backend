@@ -12,7 +12,8 @@ namespace VIMSAfrica.CORE.Service
     {
         Task<IVehicle> GetVehicleByRegNumber(string regNumber);
         Task AddVehicle(VehicleDto vehicleDto);
-        Task UpdateVehicle(VehicleDto vehicleDto);
+        Task RemoveVehicle(int id);
         Task<IVehicle> GetVehicleById(int id);
+        Task<IEnumerable<IVehicle>> GetVehicles();
     }
 }

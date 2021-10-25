@@ -44,6 +44,34 @@ namespace VIMSAfrica.CORE.Service.Impl
                 throw;
             }
         }
+
+        public Task<IEnumerable<IVehicle>> GetVehicles()
+        {
+            try
+            {
+                var record = _vehicleRepo.GetAllVehicle();
+                return record;
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                throw;
+            }
+        }
+        public async Task RemoveVehicle(int id)
+        {
+            try
+            {
+                
+                await _vehicleRepo.RemoveVehicle(id);
+
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                throw;
+            }
+        }
         public async Task AddVehicle(VehicleDto vehicleDto)
         {
             try
