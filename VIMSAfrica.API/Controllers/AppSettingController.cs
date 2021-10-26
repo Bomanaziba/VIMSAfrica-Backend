@@ -36,7 +36,8 @@ namespace VIMSAfrica.API.Controllers
 
                 return Ok(result);
 
-            }catch(Exception e)
+            }
+            catch(Exception e)
             {
                 return StatusCode(500, new { error = e.Message } );
             }
@@ -55,8 +56,8 @@ namespace VIMSAfrica.API.Controllers
 
                 return Ok();
 
-
-            }catch(Exception e)
+            }
+            catch(Exception e)
             {
                 return StatusCode(500, new { error = e.Message } );
             }

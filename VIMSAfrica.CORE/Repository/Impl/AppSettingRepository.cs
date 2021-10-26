@@ -14,7 +14,7 @@ namespace VIMSAfrica.CORE.Repository.Impl
 
     public class AppSettingRepository : IAppSettingRepository
     {
-
+        
         private readonly ILogger<AppSettingRepository> _logger;
 
         private readonly IConfiguration _config;
