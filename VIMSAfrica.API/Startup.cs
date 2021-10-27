@@ -32,6 +32,9 @@ namespace VIMSAfrica.API
         {
 
             services.AddControllers();
+
+            services.AddCors();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "VIMSAfrica.API", Version = "v1" });
@@ -39,9 +42,11 @@ namespace VIMSAfrica.API
 
             services.AddScoped<IAppSettingRepository, AppSettingRepository>();
             services.AddScoped<IAppSettingService, AppSettingService>();
-        }
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IVehicleService, VehicleService>();
+            
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -51,9 +56,11 @@ namespace VIMSAfrica.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "VIMSAfrica.API v1"));
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
+
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+            app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
