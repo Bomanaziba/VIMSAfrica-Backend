@@ -1,19 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using VIMSAfrica.CORE.Dtos;
 using VIMSAfrica.CORE.Service;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace VIMSAfrica.API.Controllers
 {
+
     [Route("[controller]")]
     [ApiController]
-
     public class VehicleController : ControllerBase
     {
 
@@ -27,13 +23,13 @@ namespace VIMSAfrica.API.Controllers
             _vehicleService = vehicleService;
             _logger = logger;
         }
-        // GET: api/<VehicleController>
-        [HttpGet("get-all-vehicles")]
-        public async Task<IActionResult> GetAllVehicles()
+
+        [HttpGet("get")]
+        public async Task<IActionResult> Get(int index, int size, string searchParams)
         {
             try
             {
-                var vehicleRecord = await _vehicleService.GetVehicles();
+                var vehicleRecord = await _vehicleService.GetPagedVehicle(index, size, searchParams);
 
                 return Ok(vehicleRecord);
             }
@@ -45,9 +41,8 @@ namespace VIMSAfrica.API.Controllers
             }
         }
 
-        // GET api/<VehicleController>/5
-        [HttpGet("get-vehicle/{id}")]
-        public async Task<IActionResult> GetVehicle(int id)
+        [HttpGet("get/{id}")]
+        public async Task<IActionResult> Get(int id)
         {
             if (id<1) return BadRequest("Enter a valid Id");
 
@@ -64,9 +59,8 @@ namespace VIMSAfrica.API.Controllers
             }
         }
 
-        // POST api/<VehicleController>
-        [HttpPost("add-vehicle")]
-        public async Task<IActionResult> AddVehicle(VehicleDto vehicleDto)
+        [HttpPost("add")]
+        public async Task<IActionResult> Add(VehicleDto vehicleDto)
         {
             if (vehicleDto == null) return BadRequest("Request can not be null");
 
@@ -89,9 +83,8 @@ namespace VIMSAfrica.API.Controllers
             }
         }
 
-        // PUT api/<VehicleController>/5
-        [HttpPut("update-vehicle/{id}")]
-        public async Task<IActionResult> EditVehicle(VehicleDto vehicleDto)
+        [HttpPost("edit/{id}")]
+        public async Task<IActionResult> Edit(VehicleDto vehicleDto)
         {
             if (vehicleDto == null) return BadRequest("Request can not be null");
 
@@ -115,11 +108,11 @@ namespace VIMSAfrica.API.Controllers
             }
         }
 
-        // DELETE api/<VehicleController>/5
-        [HttpDelete("delete-vehicle/{id}")]
-        public async Task<IActionResult> DeleteVehicle(int id)
+
+        [HttpPost("delete/{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            if (id<1) return BadRequest("Request can not be null");
+            if (id <= 0) return BadRequest("Request can not be null");
 
             try
             {

@@ -13,16 +13,44 @@ namespace VIMSAfrica.CORE.Service.Impl
 {
     public class VehicleService:IVehicleService
     {
-
-        private readonly IVehicleRepository _vehicleRepo;
+        private readonly IVehicleRepository _vehicleRepository;
         private readonly ILogger<AppSettingService> _logger;
 
+        public VehicleService(IVehicleRepository vehicleRepository, ILogger<AppSettingService> logger)
+        {
+            _vehicleRepository = vehicleRepository;
+            _logger = logger;
+        }
 
-        public Task<IVehicle> GetVehicleByRegNumber(string regNumber)
+        public async Task<PagedListDto<Vehicle>> GetPagedVehicle(int index = 1, int size = 10, string searchParams = "")
         {
             try
             {
-                var record = _vehicleRepo.GetVehicleByRegNumber(regNumber);
+                var items = await _vehicleRepository.GetPagedVehicle(index, size, searchParams);
+
+                var total = await _vehicleRepository.GetVehicleCount(searchParams);
+
+                return new PagedListDto<Vehicle>
+                {
+                    Items = items,
+                    Index = index,
+                    Size = size,
+                    Total = total
+                };
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                throw;
+            }
+        }
+
+        public async Task<IVehicle> GetVehicleByRegNumber(string regNumber)
+        {
+            try
+            {
+                var record = await _vehicleRepository.GetVehicleByRegNumber(regNumber);
+
                 return record;
             }
             catch (Exception e)
@@ -31,11 +59,13 @@ namespace VIMSAfrica.CORE.Service.Impl
                 throw;
             }
         }
+
+
         public Task<IVehicle> GetVehicleById(int id)
         {
             try
             {
-                var record = _vehicleRepo.GetVehicleById(id);
+                var record = _vehicleRepository.GetVehicleById(id);
                 return record;
             }
             catch (Exception e)
@@ -45,11 +75,12 @@ namespace VIMSAfrica.CORE.Service.Impl
             }
         }
 
-        public Task<IEnumerable<IVehicle>> GetVehicles()
+        public Task<IList<Vehicle>> GetVehicles()
         {
             try
             {
-                var record = _vehicleRepo.GetAllVehicle();
+                var record = _vehicleRepository.GetAllVehicle();
+
                 return record;
             }
             catch (Exception e)
@@ -63,7 +94,7 @@ namespace VIMSAfrica.CORE.Service.Impl
             try
             {
                 
-                await _vehicleRepo.RemoveVehicle(id);
+                await _vehicleRepository.RemoveVehicle(id);
 
             }
             catch (Exception e)
@@ -91,7 +122,7 @@ namespace VIMSAfrica.CORE.Service.Impl
                     DateCreated = DateTime.UtcNow
                 };
 
-                await _vehicleRepo.AddVehicle(vehicle);
+                await _vehicleRepository.AddVehicle(vehicle);
 
             }
             catch (Exception e)
