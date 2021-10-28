@@ -41,11 +41,12 @@ namespace VIMSAfrica.API
             });
 
             services.AddScoped<IAppSettingRepository, AppSettingRepository>();
+            services.AddScoped<IDropDownRepository, DropDownRepository>();
             services.AddScoped<IAppSettingService, AppSettingService>();
             services.AddScoped<IVehicleRepository, VehicleRepository>();
             services.AddScoped<IVehicleService, VehicleService>();
-            
-
+            services.AddScoped<IVehicleService, VehicleService>();
+            services.AddScoped<IDropDownService, DropDownService>();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
