@@ -35,10 +35,7 @@ namespace VIMSAfrica.API
 
             services.AddCors();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "VIMSAfrica.API", Version = "v1" });
-            });
+            services.AddSwaggerGen();
 
             services.AddScoped<IAppSettingRepository, AppSettingRepository>();
             services.AddScoped<IDropDownRepository, DropDownRepository>();
@@ -62,6 +59,10 @@ namespace VIMSAfrica.API
             app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI();
 
             app.UseAuthorization();
 

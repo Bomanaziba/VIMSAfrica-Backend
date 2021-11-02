@@ -74,7 +74,7 @@ namespace VIMSAfrica.API.Controllers
                 }
                  await _vehicleService.AddVehicle(vehicleDto);
 
-                return StatusCode(200, new { message = "Vehicle Added Successfully" });
+                return StatusCode(200, new { status = 200,  message = "Vehicle Added Successfully" });
             }
             catch (Exception e)
             {

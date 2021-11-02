@@ -4,6 +4,7 @@ namespace VIMSAfrica.CORE.Model
     {
         int Id { get; set; }
         string Name { get; set; }
+        string Icon { get; set; }
     }
     
 }
